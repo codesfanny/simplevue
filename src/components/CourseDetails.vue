@@ -17,15 +17,6 @@ const fetchCourse = async () => {
   }
 }
 
-const handleDelete = async () => {
-  try {
-    await customInstance.delete(`/api/v1/courses/${id}`)
-    router.push('/')
-  } catch (error) {
-    console.error('Error deleting course:', error)
-  }
-}
-
 const handleEdit = () => {
   router.push(`/course/edit/${id}`)
   console.log('Edit course:', course.value)
@@ -50,7 +41,6 @@ onMounted(() => {
       </p>
       <div class="thebuttons">
         <button @click="handleEdit" class="editbutton">Edit</button>
-        <button @click="handleDelete" class="deletebutton">Delete</button>
       </div>
     </div>
   </div>

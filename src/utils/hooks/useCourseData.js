@@ -3,7 +3,7 @@ import customInstance from '../../axiosInstance'
 
 export function useCourseData() {
   const courses = ref({ data: [] })
-  const errorMessage = ref(null)
+  const errorMessage = null
 
   const fetchCourses = async () => {
     try {
